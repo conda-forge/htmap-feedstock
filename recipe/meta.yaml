@@ -1,5 +1,5 @@
 {% set name = "htmap" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c2fa44bf91146964946e85b1ecf5d957edc0060ab3760b5f04a3f0ff8e2b27b9
+  sha256: ec0027a304d2888cbd7af62055c09d91e6623a008126b4621be1a3d5b25280d1
 
 build:
   entry_points:
     - htmap = htmap.cli:cli
   noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . -vv'
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
