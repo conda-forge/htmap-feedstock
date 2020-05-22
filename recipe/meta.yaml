@@ -1,5 +1,5 @@
 {% set name = "htmap" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ec0027a304d2888cbd7af62055c09d91e6623a008126b4621be1a3d5b25280d1
+  sha256: ee3a0eb6b13bc7ef5747f951558a489edfe26a4d0f40242e87c0222766c63e4b
 
 build:
   entry_points:
@@ -22,12 +22,12 @@ requirements:
     - python >=3.6
   run:
     - click >=7.0,<8.0.0a0
-    - click-didyoumean 0.0.3
-    - cloudpickle >=1.2,<2.0.0a0
+    - click-didyoumean >=0.0.3,<0.1.0a0
+    - cloudpickle >=1.4,<2.0.0a0
     - halo >=0.0.28,<0.1.0a0
     - htcondor >=8.8.0
     - python >=3.6
-    - toml >=0.10.0,<0.11.0a0
+    - toml >=0.10.0,<1.0.0a0
     - tqdm >=4.36,<5.0.0a0
 
 test:
