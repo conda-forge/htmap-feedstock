@@ -1,5 +1,5 @@
 {% set name = "htmap" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ee3a0eb6b13bc7ef5747f951558a489edfe26a4d0f40242e87c0222766c63e4b
+  sha256: 8620857ec5220b70b2741dda54eec3ee4bb0f8eab6ce250669e530d2daafbe55
 
 build:
   entry_points:
