@@ -5,9 +5,13 @@ Home: https://htmap.readthedocs.io/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/htmap-feedstock/blob/master/LICENSE.txt)
 
 Summary: High-Throughput Computing in Python, powered by HTCondor
+
+Development: https://github.com/htcondor/htmap
+
+Documentation: https://htmap.readthedocs.io/
 
 HTMap is a library that wraps the process of mapping Python function
 calls out to an HTCondor pool.  It provides tools for submitting,
