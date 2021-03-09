@@ -13,20 +13,21 @@ build:
   entry_points:
     - htmap = htmap.cli:cli
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python >=3.6
+    - setuptools >=40.6.0
   run:
     - click >=7.0,<8.0.0a0
     - click-didyoumean >=0.0.3,<0.1.0a0
     - cloudpickle >=1.4,<2.0.0a0
     - halo >=0.0.28,<0.1.0a0
-    - htcondor >=8.8.0
     - python >=3.6
+    - python-htcondor >=8.8.0
     - toml >=0.10.0,<1.0.0a0
     - tqdm >=4.36,<5.0.0a0
 
@@ -39,7 +40,7 @@ test:
 about:
   home: https://htmap.readthedocs.io/
   doc_url: https://htmap.readthedocs.io/
-  dev_url: https://github.com/htcondor/htmap
+  dev_url: https://github.com/htcondor/htmap.git
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
