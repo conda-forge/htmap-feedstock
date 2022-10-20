@@ -23,7 +23,8 @@ requirements:
     - setuptools >=40.6.0
     - wheel
   run:
-    - click >=7.0
+    # https://github.com/htcondor/htmap/issues/244
+    - click >=7.0,<8.1
     - click-didyoumean >=0.0.3
     - cloudpickle >=1.4
     - halo >=0.0.30
