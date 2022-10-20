@@ -13,7 +13,7 @@ build:
   entry_points:
     - htmap = htmap.cli:cli
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,20 +21,28 @@ requirements:
     - pip
     - python >=3.6
     - setuptools >=40.6.0
+    - wheel
   run:
-    - click >=7.0,<8.0.0a0
-    - click-didyoumean >=0.0.3,<0.1.0a0
-    - cloudpickle >=1.4,<2.0.0a0
-    - halo >=0.0.28,<0.1.0a0
+    # https://github.com/htcondor/htmap/issues/244
+    - click >=7.0,<8.1
+    - click-didyoumean >=0.0.3
+    - cloudpickle >=1.4
+    - halo >=0.0.30
     - python >=3.6
     - python-htcondor >=8.8.0
-    - toml >=0.10.0,<1.0.0a0
-    - tqdm >=4.36,<5.0.0a0
+    - toml >=0.10.0
+    - tqdm >=4.46
 
 test:
+  requires:
+    - pip
   imports:
     - htmap
   commands:
+    # check metadata
+    - python -m pip check htmap
+    - python -m pip show htmap
+    # check entry points
     - htmap --help
 
 about:
