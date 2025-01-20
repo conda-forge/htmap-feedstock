@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8620857ec5220b70b2741dda54eec3ee4bb0f8eab6ce250669e530d2daafbe55
 
 build:
   entry_points:
     - htmap = htmap.cli:cli
   noarch: python
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools >=40.6.0
     - wheel
   run:
@@ -28,7 +28,7 @@ requirements:
     - click-didyoumean >=0.0.3
     - cloudpickle >=1.4
     - halo >=0.0.30
-    - python >=3.6
+    - python >={{ python_min }}
     - python-htcondor >=8.8.0
     - toml >=0.10.0
     - tqdm >=4.46
@@ -36,6 +36,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - htmap
   commands:
